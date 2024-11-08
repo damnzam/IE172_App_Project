@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 body{
     background-color: #FAF3EB;
@@ -154,6 +154,7 @@ body{
     border-radius: 5px;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    margin:0 10px;
 }
 
 /* Button hover effect */
@@ -168,12 +169,46 @@ body{
     color: #F4B623;
 }
 
+.btn-back {
+    background-color: #000000; /* Black */
+    color: #F4B623;            /* Golden yellow text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Add left arrow to indicate "back" action */
+.btn-back::before {
+    content: "←";              /* Left arrow symbol */
+    margin-right: 8px;         /* Space between arrow and text */
+    font-size: 18px;           /* Adjust arrow size */
+}
+
+/* Button hover effect */
+.btn-back:hover {
+    background-color: #333333; /* Lighter black/grey */
+    color: #F4B623;            /* Keep the text color the same */
+}
+
+/* Button active effect */
+.btn-back:active {
+    background-color: #000000; /* Darker black (same as default) */
+    color: #F4B623;
+}
+
 .home-banner-main{
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('DSC_2895-scaled.jpg');
     width:fill;
     height:500px;
     object-position:center;
     z-index:0;
+    margin-bottom:10vh;
 }
 
 .home-banner-text{
@@ -186,13 +221,13 @@ body{
     background-color:rgba(0, 0, 0, 0);
 }
 
-.home-banner-title{
+.home-banner-text h1{
     font-weight:bold;
     font-style:normal;
     color:#F4B623;
 }
 
-.home-banner-subtitle{
+.home-banner-text h2{
     font-weight:normal;
     font-style:normal;
     color:#FAF3EB;
@@ -216,9 +251,21 @@ body{
 .home-column{
     float:left;
     width:25%;
-    margin: 5vh 12.5%;
-    padding: 3vh 2vw;
+    height:100%;
+    margin: 4% 12.5%;
+    padding: 5% 3%;
     border-radius:25px;
+    text-align:justify;
+}
+
+.home-column h1{
+    font-family:'Bogart';
+    font-weight:bold;
+    font-style:normal;
+    color:#F4B623;
+    text-align:center;
+    margin-bottom:20%;
+    text-transform:uppercase;
 }
 
 .columns{
@@ -237,14 +284,7 @@ body{
     text-decoration: none;
 }
 
-.home-titles {
-    font-family:'Bogart';
-    font-weight:bold;
-    font-style:normal;
-    color:#F4B623;
-    text-align:center;
-    margin-bottom:2vh;
-}
+/* Our Story */
 
 .story-title{
     color: #800000;
@@ -267,15 +307,15 @@ body{
 .story-column{
     float:left;
     width: 40%;
-    margin: 5vh 5%;
-    padding: 3vh 0;
+    margin: 2% 5%;
+    padding: 3% 0;
 }
 
 .story-column h1{
     text-transform: uppercase;
     font-family:'Roboto';
-    font-weight:bold;
-    font-size:2vw;
+    font-weight:bolder;
+    font-size:200%;
     color:#F4B623;
     background-color: #556B2F;
     border-radius:5px;
@@ -286,7 +326,7 @@ body{
     font-family:'Bogart';
     font-weight:500;
     color:#800000;
-    margin-top:5px;
+    margin-top:10%;
 }
 
 .visit-us p{
@@ -304,32 +344,145 @@ body{
 .initiatives-column h1{
     font-family:'Bogart';
     font-weight:bold;
-    font-size:5vh;
+    font-size:200%;
     color:#F4B623;
-    margin-bottom: 15vh;
+    margin-bottom: 10%;
 }
 
 .initiative-title{
     text-transform: uppercase;
     font-family:'Roboto';
-    font-weight:bold;
-    font-size:2vw;
+    font-weight:bolder;
+    font-size:200%;
     color:#F4B623;
     background-color: #556B2F;
     border-radius:5px;
     padding:10px 0;
-    margin:5vw 30%;
+    margin:0 30%;
+    margin-top:8%;
+    margin-bottom:-7%;
 }
 
 .initiatives-column{
     float:left;
     width:25.33%;
-    margin: 5vh 4%;
-    padding: 10vh 0;
+    margin: 8% 4%;
+    padding:5% 0;
     border-radius:25px;
     background-color: #f3f0e6;
-    height:70vh;
+    height:100%;
 }
+
+/* FAQ */
+
+.faq {
+    padding:0 5%;
+}
+
+.faq h1, h2{
+    font-family:'Bogart';
+    font-weight:bolder;
+    font-style:normal;
+}
+
+.faq h1{
+    text-align: center;
+    color:#F4B623;
+    margin:1.5% 0;
+}
+
+.faq h2{
+    color:#556B2F;
+    text-align:left;
+    font-size:20px;
+    margin-top:2%;
+}
+
+.faq p,li{
+    font-family:'Roboto';
+    margin-left:2%;
+}
+
+.faq a {
+    text-decoration: underline;
+    font-weight:bold;
+    color:#556b2f;
+}
+
+/* CONTACT US */
+
+.contact h1{
+    text-align:center;
+    margin:3%;
+    font-family:'Bogart';
+    font-weight:bolder;
+    color:#F4B623;
+}
+
+.contact a {
+    text-decoration: underline;
+    font-weight:bold;
+}
+
+.contact p{
+    margin:0 15%;
+}
+
+/* meet the rescues */
+
+.meet-the-rescues h1{
+    text-align:center;
+    margin:2%;
+    font-family:'Bogart';
+    font-weight:bolder;
+    color:#F4B623;   
+}
+
+.meet-the-rescues .columns{
+    width:90%;
+    margin:0 5%;
+}
+
+.gallery-card{
+    float:left;
+    width:30%;
+    margin: 2% 10%;
+    padding: 1% 0;
+    text-align:center;
+}
+
+.gallery-card button{
+    background-color: #556B2F;
+}
+
+.rescue-details{
+    background-color: #F7EFCF;
+    height:100%;
+    width:100%;
+    text-align: justify;
+    padding: 2% 15%;
+    font-family:'Roboto';
+}
+
+/* adopt */
+
+.adopt-apply {
+    margin: 2% 5%;
+}
+
+.adopt-apply h1 {
+    text-align:center;
+    margin-bottom:2%;
+    font-family:'Bogart';
+    font-weight:bolder;
+    color:#F4B623;
+}
+
+.adopt-apply .btn-custom {
+    margin-left:86%;
+}
+
+/* css na di ko sinulat after this line */
 
 .dash-bootstrap .form-group>div {
     display: block !important;
