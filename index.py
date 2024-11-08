@@ -11,11 +11,11 @@ from app import app
 from apps import headnfootTemplate as hft
 from apps import home
 from apps.adopt import adopt
-from apps.companyInfo import contactUs, faqs, ourStory
+from apps.companyInfo import contactUs, faq, ourStory
 from apps.donate import donate
 from apps.MeetTheRescues import meetTheRescues
 from apps.register import register
-from apps.signIn import signIn
+from apps.signIn import signInPage
 #from apps.headnfootTemplate import create_footer
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -27,12 +27,7 @@ app.layout = html.Div(
         html.Div(id='page_content'),
         hft.create_footer()
     ],
-    style={
-        'display': 'flex',
-        'flexDirection': 'column', 
-        'height': '100vh',          
-        'justifyContent': 'space-between',
-    }
+    className="main"
 )
 
 @app.callback(
@@ -71,13 +66,13 @@ def displaypage (pathname):
             returnlayout = ourStory.layout
 
         elif pathname == '/faqs':
-            returnlayout = faqs.layout
+            returnlayout = faq.layout
 
         elif pathname == '/contactus':
             returnlayout = contactUs.layout
         
         elif pathname == '/signin':
-            returnlayout = signIn.layout
+            returnlayout = signInPage.layout
 
         elif pathname == '/register':
             returnlayout = register.layout
