@@ -40,7 +40,6 @@ def create_header():
                 'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
                 'justifyContent': 'center',
                 'display': 'flex',
-                'marginBottom':'21vh',
                 'z-index':'999'}
         )
     return header
@@ -63,9 +62,9 @@ def create_footer():
                     'color':'white',
                     }
                 ),
-                style={'marginTop': 'auto'}
+                style={'marginTop': '5%'}
             )   
         ],
-        style={'display': 'flex', 'flexDirection': 'column', 'minHeight': '100vh'},
+        style={'display': 'flex', 'flexDirection': 'column', 'minHeight': '100%'},
     )
     return footer
