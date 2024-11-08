@@ -24,9 +24,9 @@ def create_header():
                     ],
                     navbar=True,
                     style={'justifyContent': 'center','display': 'flex','padding':'40px'} 
-                                )
+                        )
                                ]
-                )
+                        )
             ],
             style={
                 'position': 'fixed',
@@ -37,12 +37,9 @@ def create_header():
                 'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
                 'justifyContent': 'center',
                 'display': 'flex',
-                'marginBottom':'21vh'
-            }
-            )
-        ],
-        style={'z-index':'999'}
-    )
+                'marginBottom':'21vh',
+                'z-index':'999'}
+        )
     return header
     
     
