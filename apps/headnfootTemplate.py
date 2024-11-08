@@ -5,28 +5,31 @@ from dash import dcc, html
 def create_header():
     header = html.Div(children=[
             html.Header(children=[
-                html.Img(
-                    src = "assets/PawssionProjectLogo.png",
-                    style={'width': '400px',
-                           'maxWidth': '400px',
-                           'height': 'auto',
-                           'margin': '20px 0'}
+                html.A(children=[
+                    html.Img(
+                        src = "assets/PawssionProjectLogo.png",
+                        style={'width': '400px',
+                            'maxWidth': '400px',
+                            'height': 'auto',
+                            'marginTop': '20px'}
+                            )],
+                    href="/home"
                 ),
                 dbc.Nav(children=[
-                        html.Div([dbc.Button("Adopt", href="/adopt", className="btn-custom mx-1", style={'font-family': 'Roboto'})]),
-                        dbc.NavItem(dbc.NavLink("Donate", href="/donate", style={'color':'black', 'font-family': 'Roboto'})),
-                        dbc.NavItem(dbc.NavLink("Meet the Rescues", href="/meettherescues", style={'color':'black', 'font-family': 'Roboto'})),
-                        dbc.NavItem(dbc.NavLink("Our Story",  href="/ourstory", style={'color':'black', 'font-family': 'Roboto'})),
-                        dbc.NavItem(dbc.NavLink("FAQs", href="/faqs", style={'color':'black', 'font-family': 'Roboto'})),
-                        dbc.NavItem(dbc.NavLink("Contact Us", href="/contactus", style={'color':'black', 'font-family': 'Roboto'})),
-                        dbc.NavItem(dbc.NavLink("Hi, [Hooman]", href="/accountProfile", style={'color':'#556B2F', 'font-weight':'bold', 'font-family': 'Roboto'})),
-                        html.Div([dbc.Button("Logout", color='dark', href="/signin", style={'margin': '0 10px', 'font-family': 'Roboto'})])
+                    html.Div([dbc.Button("Adopt", href="/adopt", className="btn-custom mx-1")]),
+                    dbc.NavItem(dbc.NavLink("Donate", href="/donate", style={'color':'black'})),
+                    dbc.NavItem(dbc.NavLink("Meet the Rescues", href="/meettherescues", style={'color':'black'})),
+                    dbc.NavItem(dbc.NavLink("Our Story",  href="/ourstory", style={'color':'black'})),
+                    dbc.NavItem(dbc.NavLink("FAQs", href="/faqs", style={'color':'black'})),
+                    dbc.NavItem(dbc.NavLink("Hi, [Hooman]", href="/accountProfile", style={'color':'#556B2F', 'font-weight':'bold'})),
+                    html.Div([dbc.Button("Logout", color='dark', href="/signin", style={'margin': '0 10px'})])
                     ],
                     navbar=True,
-                    style={'justifyContent': 'center','display': 'flex','padding':'40px'} 
-                        )
-                               ]
-                        )
+                    style={'padding':'40px'}
+                )
+            ],
+                    style={'justifyContent': 'center','display': 'flex'}     
+                )
             ],
             style={
                 'position': 'fixed',
