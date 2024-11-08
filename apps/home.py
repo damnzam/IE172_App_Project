@@ -44,7 +44,7 @@ layout = html.Div(
                     ],
                     className="home-column", style={'backgroundColor':'#000000','color':'#FFFFFF'}
                 )
-            ], className="home-body"
+            ], className="columns"
         )
     ]
 )
